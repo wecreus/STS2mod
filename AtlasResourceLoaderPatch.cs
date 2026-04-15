@@ -4,7 +4,7 @@ using Godot;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Assets;
 
-namespace TestMod2Lol;
+namespace HighResolutionCards;
 
 [HarmonyPatch(typeof(AtlasResourceLoader), nameof(AtlasResourceLoader._Load))]
 public static class AtlasResourceLoader_Load_Patch

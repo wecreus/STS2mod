@@ -1,0 +1,11 @@
+{
+  "id": "HighResolutionCards",
+  "name": "Higher Resolution Cards",
+  "author": "wecreus",
+  "description": "Replaces card portraits with the higher resolution versions from the game files.",
+  "version": "v0.0.0",
+  "has_pck": true,
+  "has_dll": true,
+  "dependencies": ["BaseLib"],
+  "affects_gameplay": true
+}

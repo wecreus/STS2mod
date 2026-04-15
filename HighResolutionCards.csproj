@@ -83,15 +83,15 @@
 
     <ItemGroup>
         <PackageReference Include="Alchyr.Sts2.ModAnalyzers" Version="*"/>
-        <AdditionalFiles Include="TestMod2Lol/localization/**/*.json"/>
+        <AdditionalFiles Include="HighResolutionCards/localization/**/*.json"/>
     </ItemGroup>
 
     <ItemGroup>
-        <Compile Remove="TestMod2Lol/**"/>
+        <Compile Remove="HighResolutionCards/**"/>
         <Compile Remove="materials/**"/>
         <Compile Remove="shaders/**"/>
         <Compile Remove="images/**"/>
-        <EmbeddedResource Remove="TestMod2Lol/**"/>
+        <EmbeddedResource Remove="HighResolutionCards/**"/>
         <EmbeddedResource Remove="materials/**"/>
         <EmbeddedResource Remove="shaders/**"/>
         <EmbeddedResource Remove="images/**"/>
@@ -99,9 +99,9 @@
 
     <ItemGroup>
         <None Include=".gitignore"/>
-<None Include="TestMod2Lol.json"/>
+<None Include="HighResolutionCards.json"/>
         <None Include="project.godot"/>
-        <None Include="TestMod2Lol/**"/>
+        <None Include="HighResolutionCards/**"/>
     </ItemGroup>
 
     <ItemGroup>
@@ -123,7 +123,7 @@
     <Target Name="CopyToModsFolderOnBuild" AfterTargets="PostBuildEvent">
         <Message Text="Copying .dll and manifest to mods folder." Importance="high"/>
         <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(ModsPath)$(MSBuildProjectName)/"/>
-        <Copy SourceFiles="TestMod2Lol.json" DestinationFolder="$(ModsPath)$(MSBuildProjectName)/"/>
+        <Copy SourceFiles="HighResolutionCards.json" DestinationFolder="$(ModsPath)$(MSBuildProjectName)/"/>
     </Target>
 
     <Target Name="GodotPublish" AfterTargets="Publish" Condition="'$(GodotPath)' != '' and Exists('$(GodotPath)') and '$(IsInnerGodotExport)' != 'true'">
