@@ -63,6 +63,11 @@
              while your local StS2 version will be for your specific platform. -->
         <NoWarn>$(NoWarn);MSB3270</NoWarn>
     </PropertyGroup>
+    <ItemGroup>
+        <Compile Remove="**/*.uid" />
+        <EmbeddedResource Remove="**/*.uid" />
+        <None Remove="**/*.uid" />
+    </ItemGroup>
 
     <ItemGroup Condition="Exists('$(Sts2DataDir)')">
         <Reference Include="0Harmony">
@@ -94,9 +99,7 @@
 
     <ItemGroup>
         <None Include=".gitignore"/>
-        <None Include="images\atlases\relic_atlas.png" />
-        <None Include="images\atlases\relic_atlas.png.import" />
-        <None Include="TestMod2Lol.json"/>
+<None Include="TestMod2Lol.json"/>
         <None Include="project.godot"/>
         <None Include="TestMod2Lol/**"/>
     </ItemGroup>
