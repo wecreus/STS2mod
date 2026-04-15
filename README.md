@@ -8,6 +8,10 @@ The game normally displays card art from a texture atlas — many card images pa
 
 This mod intercepts the card portrait loading and redirects it to those higher resolution images instead.
 
+## Notes
+
+At 1920x1080, small card previews (such as in the deck view) may look worse than the unmodded version, since the high-resolution images are being scaled down more aggressively. At 2K (1440p) and above, the improvement is visible everywhere.
+
 ## Requirements
 
 - Slay the Spire 2
