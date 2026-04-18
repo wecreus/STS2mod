@@ -2,6 +2,10 @@
 
 A mod for Slay the Spire 2 that replaces card portraits with the higher resolution versions already present in the game files.
 
+## Preview
+
+![Comparison between standard and high resolution card portraits](comparison.png)
+
 ## What it does
 
 The game normally displays card art from a texture atlas — many card images packed into a single large texture for rendering performance. This comes at the cost of image quality. The game also ships individual, higher resolution versions of every card portrait, but does not use them during normal play.
