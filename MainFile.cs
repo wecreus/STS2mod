@@ -9,9 +9,8 @@ public partial class MainFile : Node
 {
     public const string ModId = "HighResolutionCards";
 
-public static void Initialize()
+    public static void Initialize()
     {
-        Harmony harmony = new(ModId);
-        harmony.PatchAll();
+        new Harmony(ModId).PatchAll();
     }
 }
