@@ -42,6 +42,7 @@ public static class NInspectCardScreen_UpdateCardDisplay_Patch
     private static void ApplyHighRes(NCard cardNode)
     {
         var model = cardNode.Model;
+        if (model.BetaPortraitPath == null) return;
 
         // If BetaArt is active for this card let it own the texture; skip high-res.
         if (IsBetaArtActive(model.BetaPortraitPath)) return;
@@ -57,6 +58,9 @@ public static class NInspectCardScreen_UpdateCardDisplay_Patch
         string spriteName = atlasPath.Substring(
             CardAtlasPrefix.Length,
             atlasPath.Length - CardAtlasPrefix.Length - TresSuffix.Length);
+
+        // Sprite name must be "class/card" — a bare name like "beta" means a malformed path.
+        if (!spriteName.Contains('/')) return;
 
         if (!Cache.TryGetValue(spriteName, out var texture))
         {
